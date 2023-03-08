@@ -1,0 +1,29 @@
+{
+  "name": "lupovisprowl",
+  "version": "1.0",
+  "author": "Greg Jennings",
+  "url": "/etc/cortex/analysers/Cortex-Analyzers/responders/lupovisprowl",
+  "license": "AGPL-V3",
+  "description": "Check IP rating through Lupovis Prowl API",
+  "dataTypeList": ["url", "thehive:alert", "thehive:case", "thehive:case_observable", "thehive:case_artifact"],
+  "command": "lupovisprowl/lupovisprowl.py",
+  "baseConfig": "lupovisprowl",
+  "configurationItems": [
+    {
+        "name": "lupovis_URL",
+        "description": "URL for site",
+        "type": "string",
+        "multi": false,
+        "required": true,
+        "defaultValue": "https://api.prowl.lupovis.io/GetIPReputation?ip="
+      },
+      {
+        "name": "API_KEY",
+        "description": "API key for accessing site",
+        "type": "string",
+        "multi": false,
+        "required": true,
+        "defaultValue": ""
+      }
+  ]
+}
